@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="33925344fb2f47478cf573ad942475dc" Name="Diagram1">
+        <EntityTypeShape EntityType="FASModel.FAS_Objective" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FASModel.FAS_Users" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="FASModel.Ct_StepScan" Width="1.5" PointX="0.75" PointY="8.5" />
+        <EntityTypeShape EntityType="FASModel.Ct_TestResult" Width="1.5" PointX="2.75" PointY="9.5" />
+        <EntityTypeShape EntityType="FASModel.FAS_DefectCode" Width="1.5" PointX="2.75" PointY="12.5" />
+        <EntityTypeShape EntityType="FASModel.FAS_Disassembly" Width="1.5" PointX="8.75" PointY="14.5" />
+        <EntityTypeShape EntityType="FASModel.FAS_ErrorCode" Width="1.5" PointX="2.75" PointY="15.5" />
+        <EntityTypeShape EntityType="FASModel.FAS_GS_LOTs" Width="1.5" PointX="9" PointY="0.75" />
+        <EntityTypeShape EntityType="FASModel.FAS_Lines" Width="1.5" PointX="10.75" PointY="14.5" />
+        <EntityTypeShape EntityType="FASModel.FAS_Models" Width="1.5" PointX="6.75" PointY="14.25" />
+        <EntityTypeShape EntityType="FASModel.FAS_PackingGS" Width="1.5" PointX="6" PointY="6" />
+        <EntityTypeShape EntityType="FASModel.FAS_RepairCode" Width="1.5" PointX="11.75" PointY="5.5" />
+        <EntityTypeShape EntityType="FASModel.FAS_SerialNumbers" Width="1.5" PointX="0.75" PointY="13.625" />
+        <EntityTypeShape EntityType="FASModel.FAS_Start" Width="1.5" PointX="6" PointY="10.125" />
+        <EntityTypeShape EntityType="FASModel.FAS_Upload" Width="1.5" PointX="9" PointY="9.875" />
+        <EntityTypeShape EntityType="FASModel.Ct_OperLog" Width="1.5" PointX="11.75" PointY="8.5" />
+        <AssociationConnector Association="FASModel.FK_FAS_GS_LOTs_FAS_Models" />
+        <AssociationConnector Association="FASModel.FK_FAS_GS_LOTs_FAS_Users" />
+        <AssociationConnector Association="FASModel.FK_FAS_GS_LOTs_FAS_Users1" />
+        <AssociationConnector Association="FASModel.FK_FAS_PackingGS_FAS_SerialNumbers" />
+        <AssociationConnector Association="FASModel.FK_FAS_PackingGS_FAS_Users" />
+        <AssociationConnector Association="FASModel.FK_FAS_Start_FAS_SerialNumbers" />
+        <AssociationConnector Association="FASModel.FK_FAS_Upload_FAS_SerialNumbers" />
+        <AssociationConnector Association="FASModel.FK_FAS_Start_FAS_Users" />
+        <AssociationConnector Association="FASModel.FK_FAS_Upload_FAS_Users" />
+        <EntityTypeShape EntityType="FASModel.Contract_LOT" Width="1.5" PointX="9.5" PointY="18.625" />
+        <AssociationConnector Association="FASModel.FK_Ct_OperLog_Contract_LOT" />
+        <EntityTypeShape EntityType="FASModel.FAS_Liter" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="FASModel.M_Repair_Table" Width="1.5" PointX="5.625" PointY="18.375" />
+        <AssociationConnector Association="FASModel.fk_user" />
+        <EntityTypeShape EntityType="FASModel.KGP_Control" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="FASModel.KGP_Control_Sputnik" Width="1.5" PointX="11.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

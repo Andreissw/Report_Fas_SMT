@@ -25,7 +25,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\192.168.180.9\ProdSoft\Robot_FAS_SMT\</InstallUrl>
     <UpdateUrl>\\192.168.180.9\ProdSoft\Robot_FAS_SMT\</UpdateUrl>
-    <ApplicationRevision>50</ApplicationRevision>
+    <ApplicationRevision>53</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

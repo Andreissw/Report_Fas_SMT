@@ -58,6 +58,10 @@ namespace Report_Fas_SMT
                 message.CC.Add("Попов Денис Сергеевич <d.popov@dtvs.ru>");
                 message.CC.Add("Шишкин Игорь Алексеевич <i.shishkin@dtvs.ru>");
 
+                message.CC.Add("Юдин Денис Владимирович d.yudin@dtvs.ru");
+                message.CC.Add("Силин Илья Дмитриевич i.silin@dtvs.ru");
+                message.CC.Add("Зубец Виталий Анатольевич zubetc@dtvs.ru");
+
                 client.Send(message);
               
             }      
@@ -112,6 +116,9 @@ namespace Report_Fas_SMT
                 message.CC.Add("Попов Денис Сергеевич <d.popov@dtvs.ru>");
                 message.CC.Add("Шишкин Игорь Алексеевич <i.shishkin@dtvs.ru>");
 
+                message.CC.Add("Юдин Денис Владимирович d.yudin@dtvs.ru");
+                message.CC.Add("Силин Илья Дмитриевич i.silin@dtvs.ru");
+                message.CC.Add("Зубец Виталий Анатольевич zubetc@dtvs.ru");
 
                 client.Send(message);
 

@@ -95,13 +95,14 @@ namespace Report_Fas_SMT.Reports
                 NameModel = c.Select(b => fas.Contract_LOT.Where(x => x.ID == c.Key.LOTID).Select(x => fas.FAS_Models.Where(z => z.ModelID == x.ModelID).FirstOrDefault().ModelName).FirstOrDefault()).FirstOrDefault(),
             }).OrderByDescending(c=>c.Count).Take(7).ToList();
 
-            DataFas.DataContract.ListFPY = fas.Ct_OperLog.Where(c => c.StepDate >= now & c.LOTID != null & new List<short>() {1,6 }.Contains((short)c.StepID)).GroupBy(c=> new { c.LOTID }).Select(c => new FPY_Ct
+            DataFas.DataContract.ListFPY = fas.Ct_OperLog.Where(c => c.StepDate >= now & c.LOTID != null).GroupBy(c=> new { c.LOTID }).Select(c => new FPY_Ct
             {
                 ModelName = c.Select(b => fas.Contract_LOT.Where(x => x.ID == c.Key.LOTID).Select(x => fas.FAS_Models.Where(z => z.ModelID == x.ModelID).FirstOrDefault().ModelName).FirstOrDefault()).FirstOrDefault(),
                 Count = c.Where(b=>b.TestResultID == 2 & b.StepID == 6).Count(),
-                CountError = c.Where(b => b.TestResultID == 3 & b.StepID == 1).Count(),
+                CountError = c.Where(b => b.TestResultID == 3 & b.ErrorCodeID != null).Count(),
 
             }).ToList();
+            
 
             DataFas.Data_VLV.ListFPY = fas.FAS_PackingGS.Where(c => c.PackingDate >= now).GroupBy(c=> new { c.LiterID, c.LOTID}).Select(c => new FPY_VLV
             {
@@ -223,6 +224,11 @@ namespace Report_Fas_SMT.Reports
                         </tr>";
         } 
         string GetFPYCt(FPY_Ct fpy) {
+
+            if (fpy.Count == 0)
+            {
+                return "";
+            }
 
             string style = GetStyle(fpy.FPY.ToString());
             return $@"  <tr >
